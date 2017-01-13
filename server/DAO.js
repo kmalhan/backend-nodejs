@@ -32,7 +32,7 @@ var models = {
 	appointment : mongoose.model("appointment", schemas.appointment),
 	contact : mongoose.model("contact", schemas.contact),
 	note : mongoose.model("note", schemas.note),
-	task : mongoose.model.("task", schemas.task)
+	task : mongoose.model("task", schemas.task)
 }
 
 // Connect to database
@@ -48,7 +48,7 @@ function POST(onType, dataObj) {
 		if (inError) {
 			throw "Error: " + JSON.stringify(inError);
 		} else {
-			console.log(dataObj.id + ": Success: " inObj._id);
+			console.log(dataObj.id + ": Success: " + inObj._id);
 			completeResponse(dataObj, 200, "text", "" + inObj._id);
 		}
 	});
@@ -77,7 +77,7 @@ function GET(onType, dataObj) {
 
 function GET_ALL(onType, dataObj) {
 
-	console.log(dataObj.id ": DAO.POST(): " onType);
+	console.log(dataObj.id + ": DAO.POST(): " + onType);
 
 	var opts = { sort: { } };
 	switch (onType) {
