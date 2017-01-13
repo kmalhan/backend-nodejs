@@ -1,3 +1,5 @@
+#!/bin/bash
+set -Ceu
 # Test Api for node.js application
 if [ -z "$1" ]; then
 	exit
